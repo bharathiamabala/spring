@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- <context:annotation-config/> -->
+	<bean name="studentObj" class="spring.coupling.Student">
+		<property name="name" value="bharu" />
+		<property name="age" value="20" />
+		<property name="add">
+			<list>
+				<value>kukatpally</value>
+				<value>hyd</value>
+			</list>
+		</property>
+		<property name="phoneNo">
+			<set>
+				<value>124545454</value>
+				<value>44444</value>
+			</set>
+		</property>
+		<property name="value">
+			<map>
+				<entry key="1" value="hello" />
+				<entry key="2" value="welcome" />
+				<entry key="3" value="blue" />
+			</map>
+		</property>
+		<property name="prop">
+			<props>
+				<prop key="one">obbbb</prop>
+				<prop key="two">2obj</prop>
+			</props>
+		</property>
+		<property name="address">
+			<ref bean="addressObj"></ref>
+		</property>
+	</bean>
+
+	<bean name="addressObj" class="spring.coupling.Address">
+		<property name="houseNumber" value="1222" />
+		<property name="street" value="bal" />
+		<property name="area" value="kk" />
+		<property name="city" value="hyd" />
+		<property name="state" value="ts" />
+		<property name="country" value="ind" />
+	</bean>
+</beans>
