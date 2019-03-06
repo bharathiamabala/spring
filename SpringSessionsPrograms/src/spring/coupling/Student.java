@@ -8,10 +8,15 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
 /**
  * @author satya
  *
  */
+//Setter Injection Example
+@ComponentScan
 public class Student {
 	private String name;
 	private int age;

@@ -1,8 +1,13 @@
 package spring.coupling;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
 /**
  * @author satya
  *
  */
+@ComponentScan
 public class Address {
 	private String houseNumber;
 	private String street;
