@@ -6,8 +6,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 	<!-- <context:annotation-config/>  -->
-	<context:component-scan base-package="spring.coupling"/>
-	<bean name="studentObj" class="Student">
+	<context:annotation-config/>
+	<!-- <context:component-scan base-package="spring.coupling"/> -->
+	<bean name="custObj" class="spring.annotation.Customer"/>
+	<bean name="studentObj" class="spring.coupling.Student">
 		<property name="name" value="bharu" />
 		<property name="age" value="20" />
 		<property name="add">
@@ -40,7 +42,7 @@
 		</property>
 	</bean>
 
-	<bean name="addressObj" class="Address">
+	<bean name="addressObj" class="spring.coupling.Address">
 		<property name="houseNumber" value="1222" />
 		<property name="street" value="bal" />
 		<property name="area" value="kk" />
@@ -51,11 +53,12 @@
 	
 	
 	
-	<bean name="empObj" class="Employee" scope="prototype">
+	<bean name="empObj" class="spring.coupling.Employee" scope="prototype">
 	<constructor-arg index="0" value="bha"/>
 	<constructor-arg index="1" value="12333"/>
 	<constructor-arg index="2" value="40000"/>
 	<constructor-arg index="3" value="sse"/>
 	<!-- <property name="designation" value="se2"/> -->
 	</bean>
+	
 </beans>
